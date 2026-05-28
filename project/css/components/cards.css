@@ -1,0 +1,480 @@
+/* ===================================
+   CONTENT
+=================================== */
+.content {
+    flex: 1;
+    overflow: auto;
+    padding: 20px;
+}
+
+.page {
+    display: none;
+}
+
+.active-page {
+    display: block;
+}
+
+/* ===================================
+   CARD
+=================================== */
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.card-header h3 {
+    color: var(--text);
+    font-size: 15.5px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+/* ===================================
+   STAT GRID
+=================================== */
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 18px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    box-shadow: var(--shadow);
+    transition: .22s;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    border-radius: 0 0 3px 3px;
+}
+
+.stat-card:nth-child(1)::before {
+    background: var(--blue);
+}
+
+.stat-card:nth-child(2)::before {
+    background: var(--success);
+}
+
+.stat-card:nth-child(3)::before {
+    background: var(--warning);
+}
+
+.stat-card:nth-child(4)::before {
+    background: var(--danger);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    flex-shrink: 0;
+}
+
+.stat-body {
+    min-width: 0;
+}
+
+.stat-value {
+    font-size: 27px;
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1;
+}
+
+.stat-title {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+.blue {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.green {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.orange {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.red {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+/* ===================================
+   PROGRESS
+=================================== */
+.progress-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.progress-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: var(--bg);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #16a085, #10b981, #34d399);
+    border-radius: 20px;
+    transition: .6s cubic-bezier(.4, 0, .2, 1);
+}
+
+.progress-info {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+/* ===================================
+   BUTTONS
+=================================== */
+.primary-btn {
+    border: none;
+    background: var(--primary);
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 9px 16px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: inherit;
+    transition: .2s;
+    white-space: nowrap;
+}
+
+.primary-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(22, 160, 133, .3);
+}
+
+.secondary-btn {
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    padding: 9px 16px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: inherit;
+    transition: .2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.secondary-btn:hover {
+    background: var(--bg);
+}
+
+.danger-btn {
+    border: none;
+    background: #ef4444;
+    color: white;
+    padding: 9px 16px;
+    border-radius: 9px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.danger-btn:hover {
+    background: #dc2626;
+}
+
+.see-all-btn {
+    border: none;
+    background: none;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 4px 8px;
+    border-radius: 7px;
+    transition: .2s;
+    white-space: nowrap;
+}
+
+.see-all-btn:hover {
+    background: var(--primary-light);
+}
+
+/* View toggle buttons */
+.view-toggle {
+    display: flex;
+    gap: 4px;
+}
+
+.view-btn {
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text-light);
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+    font-family: inherit;
+}
+
+.view-btn.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.view-btn:hover:not(.active) {
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* ===================================
+   FORM
+=================================== */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: 9px;
+    padding: 10px 13px;
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+    color: var(--text);
+    transition: .2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(22, 160, 133, .1);
+}
+
+.full-width {
+    grid-column: 1/-1;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* ===================================
+   TABLE TOOLS
+=================================== */
+.table-tools {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.table-tools input {
+    flex: 1;
+    min-width: 160px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 9px 13px;
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+    color: var(--text);
+    background: var(--card);
+    transition: .2s;
+}
+
+.table-tools input:focus {
+    border-color: var(--primary);
+}
+
+.table-tools select {
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 9px 13px;
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    color: var(--text);
+    background: var(--card);
+}
+
+/* ===================================
+   STATUS BADGES
+=================================== */
+.status {
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    flex-shrink: 0;
+    letter-spacing: .2px;
+}
+
+.status.done {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.status.doing {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.status.fix {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status.pending {
+    background: #f3e8ff;
+    color: #7c3aed;
+}
+
+/* ===================================
+   ACTION BUTTONS
+=================================== */
+.action-group {
+    display: flex;
+    gap: 5px;
+}
+
+.action-btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: .18s;
+    color: white;
+}
+
+.action-view {
+    background: #3b82f6;
+}
+
+.action-view:hover {
+    background: #2563eb;
+    transform: scale(1.1);
+}
+
+.action-edit {
+    background: #10b981;
+}
+
+.action-edit:hover {
+    background: #059669;
+    transform: scale(1.1);
+}
+
+.action-delete {
+    background: #ef4444;
+}
+
+.action-delete:hover {
+    background: #dc2626;
+    transform: scale(1.1);
+}

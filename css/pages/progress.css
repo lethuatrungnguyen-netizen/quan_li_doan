@@ -1,0 +1,609 @@
+/* ===================================
+   PROGRESS PAGE - #progressPage
+   (Theo dõi tiến độ)
+=================================== */
+
+/* ===================================
+   STUDENT TABS CARD
+=================================== */
+.prog-student-tabs-card {
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+}
+
+.prog-tabs-label {
+    font-size: 13px;
+    color: var(--text-light);
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.prog-student-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.prog-student-tab {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 14px;
+    border-radius: 30px;
+    border: 1.5px solid var(--border);
+    background: var(--card);
+    color: var(--text-light);
+    font-size: 13px;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all .18s;
+}
+
+.prog-student-tab:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.prog-student-tab.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+}
+
+.prog-tab-avatar {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.prog-student-tab:not(.active) .prog-tab-avatar {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+/* ===================================
+   LAYOUT
+=================================== */
+.prog-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 16px;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .prog-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===================================
+   INFO CARD
+=================================== */
+.prog-info-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 0 4px;
+}
+
+.prog-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--purple, #8b5cf6));
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+    box-shadow: 0 4px 16px rgba(22, 160, 133, .25);
+}
+
+.prog-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    text-align: center;
+}
+
+.prog-meta-row {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.prog-meta-tag {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+.prog-detail-list {
+    width: 100%;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.prog-detail-row {
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+    align-items: flex-start;
+}
+
+.prog-detail-lbl {
+    color: var(--text-light);
+    min-width: 90px;
+    flex-shrink: 0;
+    font-weight: 500;
+}
+
+.prog-link {
+    color: var(--primary);
+    text-decoration: underline;
+    font-size: 12px;
+    word-break: break-all;
+}
+
+/* ===================================
+   PROGRESS CARD
+=================================== */
+.prog-progress-body {
+    padding: 4px 0;
+}
+
+.prog-progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.prog-pct-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.prog-pct-val {
+    font-size: 20px;
+    font-weight: 800;
+    min-width: 52px;
+    text-align: center;
+}
+
+.prog-pct-btn {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .15s;
+}
+
+.prog-pct-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: var(--primary-light);
+}
+
+.prog-progress-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+/* ===================================
+   MILESTONE LIST
+=================================== */
+.prog-milestone-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 4px;
+}
+
+.prog-ms-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1.5px solid var(--border);
+    background: var(--bg);
+    font-size: 13px;
+}
+
+.prog-ms-item.ms-done {
+    border-color: var(--success);
+    background: rgba(16, 185, 129, .07);
+}
+
+.prog-ms-item.ms-doing {
+    border-color: var(--primary);
+    background: var(--primary-light);
+}
+
+.prog-ms-icon {
+    font-size: 18px;
+    color: var(--text-light);
+    flex-shrink: 0;
+}
+
+.ms-done .prog-ms-icon { color: var(--success); }
+.ms-doing .prog-ms-icon { color: var(--primary); }
+
+.prog-ms-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.prog-ms-title {
+    font-weight: 600;
+    color: var(--text);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.prog-ms-date {
+    font-size: 11px;
+    color: var(--text-light);
+    margin-top: 2px;
+}
+
+/* ===================================
+   CHAT CARD
+=================================== */
+.prog-chat-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 520px;
+}
+
+.prog-chat-tabs {
+    display: flex;
+    gap: 2px;
+    border-bottom: 1.5px solid var(--border);
+    margin: -20px -20px 16px;
+    padding: 0 16px;
+}
+
+.prog-tab {
+    padding: 12px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    border: none;
+    background: transparent;
+    color: var(--text-light);
+    cursor: pointer;
+    border-bottom: 2.5px solid transparent;
+    margin-bottom: -1.5px;
+    font-family: inherit;
+    transition: .15s;
+}
+
+.prog-tab:hover { color: var(--primary); }
+.prog-tab.active { color: var(--primary); border-bottom-color: var(--primary); }
+
+.prog-tab-panel {
+    display: none;
+    flex: 1;
+    flex-direction: column;
+}
+
+.prog-tab-panel.active {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Chat messages */
+.prog-chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 260px;
+    max-height: 340px;
+    padding-right: 4px;
+}
+
+.prog-chat-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 120px;
+    color: var(--text-light);
+    font-size: 13px;
+}
+
+.prog-chat-empty i {
+    font-size: 32px;
+    opacity: .4;
+}
+
+.prog-msg {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.prog-msg.advisor { flex-direction: row; }
+.prog-msg.student { flex-direction: row-reverse; }
+
+.prog-msg-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.prog-msg-bubble {
+    max-width: 75%;
+    background: var(--bg);
+    border-radius: 12px;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+}
+
+.prog-msg.student .prog-msg-bubble {
+    background: var(--primary-light);
+    border-color: rgba(22, 160, 133, .2);
+    text-align: right;
+}
+
+.prog-msg-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+
+.prog-msg.student .prog-msg-header { justify-content: flex-end; }
+
+.prog-msg-name { font-weight: 700; font-size: 13px; color: var(--text); }
+.prog-msg-time { font-size: 11px; color: var(--text-light); margin-left: auto; }
+
+.prog-msg-badge {
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.prog-msg-badge.question { background: rgba(245, 158, 11, .12); color: var(--warning); }
+.prog-msg-badge.feedback { background: var(--primary-light); color: var(--primary); }
+
+.prog-msg-text {
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.55;
+}
+
+/* Chat input */
+.prog-chat-input-area {
+    margin-top: 14px;
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.prog-chat-input-area textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px 14px;
+    font-family: inherit;
+    font-size: 13px;
+    background: var(--card);
+    color: var(--text);
+    resize: none;
+    display: block;
+}
+
+.prog-chat-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.prog-chat-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.prog-chat-role select {
+    min-width: 130px;
+    padding: 8px 10px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.prog-chat-type-btns { display: flex; gap: 6px; }
+
+.prog-type-btn {
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1.5px solid var(--border);
+    background: var(--card);
+    font-size: 12px;
+    font-family: inherit;
+    cursor: pointer;
+    color: var(--text-light);
+    font-weight: 500;
+    transition: .15s;
+}
+
+.prog-type-btn:hover,
+.prog-type-btn.active {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: var(--primary-light);
+}
+
+/* ===================================
+   TIMELINE
+=================================== */
+.prog-timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-height: 440px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.prog-tl-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-left: 2px solid var(--border);
+    margin-left: 8px;
+    padding-left: 16px;
+    position: relative;
+}
+
+.prog-tl-dot {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: -12px;
+    top: 10px;
+    flex-shrink: 0;
+}
+
+.prog-tl-body { flex: 1; min-width: 0; }
+.prog-tl-time { font-size: 11px; color: var(--text-light); margin-bottom: 2px; }
+.prog-tl-text { font-size: 13px; color: var(--text); }
+
+/* ===================================
+   DOCS
+=================================== */
+.prog-docs-upload {
+    border: 2px dashed var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.prog-docs-upload i {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 6px;
+    opacity: .5;
+}
+
+.prog-upload-label {
+    color: var(--primary);
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.prog-docs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.prog-doc-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+}
+
+/* ===================================
+   EMPTY STATE
+=================================== */
+.prog-empty-state {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 60px 20px;
+    color: var(--text-light);
+    text-align: center;
+    font-size: 14px;
+}
+
+.prog-empty-state i {
+    font-size: 48px;
+    opacity: .3;
+}
+
+/* ===================================
+   DARK MODE
+=================================== */
+body.dark .prog-student-tab { background: var(--card); }
+body.dark .prog-ms-item { background: #1a2740; }
+body.dark .prog-msg-bubble { background: #1a2740; }
+body.dark .prog-msg.student .prog-msg-bubble { background: rgba(22, 160, 133, .15); }
+body.dark .prog-chat-input-area textarea { background: var(--card); }
+body.dark .prog-chat-actions { background: #1a2740; }
+body.dark .prog-doc-item { background: #1a2740; }
+body.dark .prog-type-btn { background: var(--card); }

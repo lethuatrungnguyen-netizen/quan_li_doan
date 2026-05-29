@@ -1,0 +1,17 @@
+/* ===================================
+   SETTING PAGE - #settingPage
+=================================== */
+
+/* ===================================
+   SETTING GROUPS
+=================================== */
+.setting-group {
+    margin-bottom: 16px;
+}
+
+.setting-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 8px;
+}

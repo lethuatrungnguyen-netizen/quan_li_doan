@@ -1,0 +1,194 @@
+/* ===================================
+   FEEDBACK PAGE - #feedbackPage
+   ACTIVITY PAGE - #activityPage
+=================================== */
+
+/* ===================================
+   FEEDBACK
+=================================== */
+.feedback-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 18px;
+}
+
+.feedback-item {
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 12px 14px;
+    border-left: 3px solid var(--primary);
+}
+
+.feedback-author {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.feedback-content {
+    line-height: 1.55;
+    font-size: 13px;
+}
+
+.feedback-time {
+    margin-top: 5px;
+    font-size: 11px;
+    color: var(--text-light);
+}
+
+.feedback-form {
+    display: flex;
+    gap: 10px;
+}
+
+.feedback-form input {
+    flex: 1;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 10px 13px;
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+    color: var(--text);
+    background: var(--card);
+}
+
+/* ===================================
+   QUICK FEEDBACK CARD
+=================================== */
+.quick-feedback-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.quick-feedback-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 350px;
+    overflow-y: auto;
+    padding-right: 4px;
+    margin-bottom: 12px;
+}
+
+.quick-fb-item {
+    background: #f8fafc;
+    border-radius: 9px;
+    padding: 9px 11px;
+    border-left: 3px solid var(--primary);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    transition: 0.2s;
+}
+
+.quick-fb-author {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 3px;
+}
+
+.quick-fb-item:hover {
+    background: var(--primary-light);
+}
+
+.quick-fb-content {
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--text);
+}
+
+.quick-fb-time {
+    font-size: 10px;
+    color: var(--text-light);
+    margin-top: 3px;
+}
+
+.quick-fb-empty {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-light);
+}
+
+.quick-fb-empty i {
+    font-size: 26px;
+    display: block;
+    margin-bottom: 6px;
+    opacity: .4;
+}
+
+.quick-feedback-form textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 9px 11px;
+    font-family: inherit;
+    font-size: 13px;
+    resize: none;
+    outline: none;
+    background: var(--card);
+    color: var(--text);
+    transition: .2s;
+}
+
+.quick-feedback-form textarea:focus {
+    border-color: var(--primary);
+}
+
+.quick-feedback-actions {
+    display: flex;
+    gap: 7px;
+    margin-top: 8px;
+    align-items: center;
+}
+
+.quick-feedback-actions select {
+    flex: 1;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 8px 10px;
+    font-family: inherit;
+    font-size: 12px;
+    background: var(--card);
+    color: var(--text);
+    cursor: pointer;
+    outline: none;
+}
+
+/* ===================================
+   ACTIVITY LOG
+=================================== */
+#activityList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.activity-item {
+    border-left: 3px solid var(--primary);
+    background: #f8fafc;
+    border-radius: 9px;
+    padding: 11px 14px;
+}
+
+.activity-text {
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.activity-time {
+    margin-top: 4px;
+    font-size: 11px;
+    color: var(--text-light);
+}
+
+/* Responsive */
+@media(max-width:768px) {
+    .feedback-form {
+        flex-direction: column;
+    }
+}

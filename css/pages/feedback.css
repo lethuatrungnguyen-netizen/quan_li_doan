@@ -1,11 +1,4 @@
-/* ===================================
-   FEEDBACK PAGE - #feedbackPage
-   ACTIVITY PAGE - #activityPage
-=================================== */
-
-/* ===================================
-   FEEDBACK
-=================================== */
+/*feedback*/
 .feedback-list {
     display: flex;
     flex-direction: column;
@@ -57,9 +50,6 @@
     background: var(--card);
 }
 
-/* ===================================
-   QUICK FEEDBACK CARD
-=================================== */
 .quick-feedback-card {
     display: flex;
     flex-direction: column;
@@ -159,9 +149,6 @@
     outline: none;
 }
 
-/* ===================================
-   ACTIVITY LOG
-=================================== */
 #activityList {
     display: flex;
     flex-direction: column;

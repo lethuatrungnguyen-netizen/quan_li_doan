@@ -1,6 +1,4 @@
-/* ===================================
-   PAGE NAVIGATION
-=================================== */
+/*   PAGE NAVIGATION */
 function showPage(pageId, button) {
     document.querySelectorAll(".page").forEach(p => p.classList.remove("active-page"));
     document.getElementById(pageId).classList.add("active-page");
@@ -16,9 +14,7 @@ function showPage(pageId, button) {
     document.getElementById("pageTitle").textContent = map[pageId] || "";
 }
 
-/* ===================================
-   TOAST
-=================================== */
+/* TOAST*/
 function showToast(message, type = "success") {
     const c = document.getElementById("toastContainer");
     const t = document.createElement("div");
@@ -28,9 +24,7 @@ function showToast(message, type = "success") {
     setTimeout(() => t.remove(), 3000);
 }
 
-/* ===================================
-   ACTIVITY LOG
-=================================== */
+/* ACTIVITY LOG */
 function addLog(text) {
     appData.logs.unshift({ text, time: new Date().toLocaleString("vi-VN") });
     saveData(); renderLogs();
@@ -54,15 +48,11 @@ function renderLogs() {
         </div>`).join("");
 }
 
-/* ===================================
-   DARK MODE
-=================================== */
+/* DARK MODE*/
 function toggleTheme() {
     appData.settings.darkMode = !appData.settings.darkMode;
     saveData(); applyTheme();
 }
 function applyTheme() { document.body.classList.toggle("dark", appData.settings.darkMode); }
 
-/* ===================================
-   PROJECT (ĐỒ ÁN CỦA TÔI)
-=================================== */
+

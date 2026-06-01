@@ -1,28 +1,29 @@
 <!DOCTYPE html>
+
 <html lang="vi">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Quản lý Đồ án Tốt nghiệp</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    <link rel="stylesheet" href="css/base/reset.css">
-    <link rel="stylesheet" href="css/layout/sidebar.css">
-    <link rel="stylesheet" href="css/layout/topbar.css">
-    <link rel="stylesheet" href="css/components/cards.css">
-    <link rel="stylesheet" href="css/pages/dashboard.css">
-    <link rel="stylesheet" href="css/pages/my_project.css">
-    <link rel="stylesheet" href="css/pages/repository.css">
-    <link rel="stylesheet" href="css/pages/progress.css">
-    <link rel="stylesheet" href="css/pages/feedback.css">
-    <link rel="stylesheet" href="css/pages/setting.css">
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" rel="stylesheet" />
+    <link href="css/base/reset.css" rel="stylesheet" />
+    <link href="css/layout/sidebar.css" rel="stylesheet" />
+    <link href="css/layout/topbar.css" rel="stylesheet" />
+    <link href="css/components/cards.css" rel="stylesheet" />
+    <link href="css/pages/dashboard.css" rel="stylesheet" />
+    <link href="css/pages/my_project.css" rel="stylesheet" />
+    <link href="css/pages/repository.css" rel="stylesheet" />
+    <link href="css/pages/progress.css" rel="stylesheet" />
+    <link href="css/pages/feedback.css" rel="stylesheet" />
+    <link href="css/pages/setting.css" rel="stylesheet" />
+
 </head>
 
 <body>
-
     <!-- SIDEBAR -->
     <aside class="sidebar">
         <div class="logo">
@@ -73,7 +74,6 @@
         </nav>
     </aside>
 
-    <!-- MAIN -->
     <main class="main">
 
         <!-- TOPBAR -->
@@ -91,16 +91,11 @@
 
         <!-- CONTENT -->
         <section class="content">
-
-            <!-- ============================================================
-     DASHBOARD PAGE
-============================================================ -->
-            <div id="dashboardPage" class="page active-page">
+            <!--Dashboard page -->
+            <div class="page active-page" id="dashboardPage">
                 <div class="dashboard-layout">
-
                     <!-- CỘT TRÁI -->
                     <div class="dashboard-main">
-
                         <!-- THỐNG KÊ -->
                         <div class="stat-grid">
                             <div class="stat-card">
@@ -136,12 +131,12 @@
                         <!-- TIẾN ĐỘ -->
                         <div class="card">
                             <div class="card-header">
-                                <h3><i class="ti ti-chart-bar" style="color:var(--primary)"></i>Tiến độ tổng quan</h3>
+                                <h3><i class="ti ti-chart-bar"></i>Tiến độ tổng quan</h3>
                             </div>
                             <div class="progress-box">
                                 <div class="progress-top">
                                     <span>Tỉ lệ hoàn thành</span>
-                                    <span id="progressPercent" style="color:var(--primary)">0%</span>
+                                    <span id="progressPercent">0%</span>
                                 </div>
                                 <div class="progress-bar">
                                     <div class="progress-fill" id="progressFill"></div>
@@ -153,20 +148,20 @@
                         <!-- ĐỒ ÁN CHỦ YẾU -->
                         <div class="card">
                             <div class="card-header">
-                                <h3><i class="ti ti-folder-filled" style="color:var(--primary)"></i>Đồ án của tôi</h3>
+                                <h3><i class="ti ti-folder-filled"></i>Đồ án của tôi</h3>
                                 <button class="primary-btn"
                                     onclick="showPage('projectPage', document.querySelectorAll('.menu-item')[1])">
                                     <i class="ti ti-edit"></i> Chỉnh sửa
                                 </button>
                             </div>
-                            <div id="dashboardProject" class="project-summary"></div>
+                            <div class="project-summary" id="dashboardProject"></div>
                         </div>
 
                         <!-- KHO ĐỒ ÁN - DẠNG BẢNG -->
                         <div class="card">
                             <div class="card-header">
                                 <h3>
-                                    <i class="ti ti-stack" style="color:var(--primary)"></i>
+                                    <i class="ti ti-stack"></i>
                                     Kho đồ án
                                     <span class="count-badge" id="dashTableCount">0</span>
                                 </h3>
@@ -191,7 +186,7 @@
                                     <tbody id="dashTableBody"></tbody>
                                 </table>
                             </div>
-                            <div id="dashTableEmpty" class="project-empty" style="display:none">
+                            <div class="project-empty" id="dashTableEmpty">
                                 <i class="ti ti-stack"></i>
                                 <p>Chưa có đồ án nào.
                                     <a href="#"
@@ -200,29 +195,28 @@
                                 </p>
                             </div>
                         </div>
-
                     </div>
 
                     <!-- CỘT PHẢI -->
                     <aside class="dashboard-sidebar-right">
                         <div class="card quick-feedback-card">
                             <div class="card-header">
-                                <h3><i class="ti ti-message-bolt" style="color:var(--primary)"></i>Phản hồi nhanh</h3>
+                                <h3><i class="ti ti-message-bolt"></i>Phản hồi nhanh</h3>
                                 <button class="see-all-btn"
                                     onclick="showPage('feedbackPage', document.querySelectorAll('.menu-item')[5])">
                                     Xem tất cả <i class="ti ti-chevron-right"></i>
                                 </button>
                             </div>
-                            <div id="quickFeedbackList" class="quick-feedback-list"></div>
+                            <div class="quick-feedback-list" id="quickFeedbackList"></div>
                             <div class="quick-feedback-form">
-                                <textarea id="quickFeedbackInput" rows="3"
-                                    placeholder="Nhập phản hồi nhanh..."></textarea>
+                                <textarea id="quickFeedbackInput" placeholder="Nhập phản hồi nhanh..."
+                                    rows="3"></textarea>
                                 <div class="quick-feedback-actions">
                                     <select id="quickFeedbackRole">
                                         <option value="Sinh viên">Sinh viên</option>
                                         <option value="Giảng viên">Giảng viên</option>
                                     </select>
-                                    <button class="primary-btn" onclick="sendQuickFeedback()" style="padding:8px 12px">
+                                    <button class="primary-btn" onclick="sendQuickFeedback()">
                                         <i class="ti ti-send"></i> Gửi
                                     </button>
                                 </div>
@@ -231,45 +225,41 @@
                                 <button class="github-quick-btn" id="githubQuickBtn" onclick="openGithubLink()">
                                     <i class="ti ti-brand-github"></i>
                                     <span id="githubQuickLabel">Mở GitHub Repository</span>
-                                    <i class="ti ti-external-link"
-                                        style="margin-left:auto;font-size:13px;opacity:.7;"></i>
+                                    <i class="ti ti-external-link"></i>
                                 </button>
                             </div>
                         </div>
                     </aside>
-
                 </div>
             </div>
 
-            <!-- ============================================================
-     ĐỒ ÁN CỦA TÔI
-============================================================ -->
-            <div id="projectPage" class="page">
+            <!--Đồ án của tôi-->
+            <div class="page" id="projectPage">
                 <div class="card">
                     <div class="card-header">
-                        <h3 id="myProjectFormTitle"><i class="ti ti-folder-plus" style="color:var(--primary)"></i> Thêm
+                        <h3 id="myProjectFormTitle"><i class="ti ti-folder-plus"></i> Thêm
                             đồ án mới vào danh sách</h3>
                         <button class="primary-btn" onclick="saveNewProjectToList()">
                             <i class="ti ti-device-floppy"></i> Lưu đồ án
                         </button>
                     </div>
                     <div class="form-grid">
-                        <input type="hidden" id="myProjectEditIndex" value="-1">
+                        <input id="myProjectEditIndex" type="hidden" value="-1" />
                         <div class="form-group">
                             <label>Mã đồ án</label>
-                            <input type="text" id="myProjectId">
+                            <input id="myProjectId" type="text" />
                         </div>
                         <div class="form-group">
                             <label>Tên đề tài <span class="required">*</span></label>
-                            <input type="text" id="myProjectName" placeholder="Nhập tên đề tài...">
+                            <input id="myProjectName" placeholder="Nhập tên đề tài..." type="text" />
                         </div>
                         <div class="form-group">
                             <label>Giảng viên hướng dẫn</label>
-                            <input type="text" id="myProjectTeacher" placeholder="Tên giảng viên...">
+                            <input id="myProjectTeacher" placeholder="Tên giảng viên..." type="text" />
                         </div>
                         <div class="form-group">
                             <label>Đường dẫn liên kết (Link)</label>
-                            <input type="url" id="myProjectUrl" placeholder="Nhập link github...">
+                            <input id="myProjectUrl" placeholder="Nhập link github..." type="url" />
                         </div>
                         <div class="form-group">
                             <label>Trạng thái</label>
@@ -281,31 +271,30 @@
                         </div>
                         <div class="form-group full-width">
                             <label>Mô tả ngắn gọn</label>
-                            <textarea id="myProjectDesc" rows="3" placeholder="Nhập mô tả..."></textarea>
+                            <textarea id="myProjectDesc" placeholder="Nhập mô tả..." rows="3"></textarea>
                         </div>
                         <div class="form-group full-width">
                             <label>Đánh giá của giảng viên</label>
-                            <textarea id="myProjectTeacherReview" rows="3"
-                                placeholder="Nhập đánh giá/nhận xét của giảng viên..."></textarea>
+                            <textarea id="myProjectTeacherReview" placeholder="Nhập đánh giá/nhận xét của giảng viên..."
+                                rows="3"></textarea>
                         </div>
                     </div>
                 </div>
-
                 <div class="card">
                     <div class="card-header">
-                        <h3><i class="ti ti-list" style="color:var(--primary)"></i> Danh sách đồ án cá nhân</h3>
+                        <h3><i class="ti ti-list"></i> Danh sách đồ án cá nhân</h3>
                     </div>
                     <div class="dash-table-wrap">
-                        <table class="project-table" style="width:100%; min-width:600px;">
+                        <table class="project-table">
                             <thead>
-                                <tr style="background:var(--bg); text-align:left;">
-                                    <th style="padding:10px;">Mã</th>
-                                    <th style="padding:10px;">Tên đề tài</th>
-                                    <th style="padding:10px;">Giảng viên</th>
-                                    <th style="padding:10px;">Đánh giá GV</th>
-                                    <th style="padding:10px;">Đường dẫn</th>
-                                    <th style="padding:10px;">Trạng thái</th>
-                                    <th style="padding:10px; text-align:center;">Hành động</th>
+                                <tr>
+                                    <th>Mã</th>
+                                    <th>Tên đề tài</th>
+                                    <th>Giảng viên</th>
+                                    <th>Đánh giá GV</th>
+                                    <th>Đường dẫn</th>
+                                    <th>Trạng thái</th>
+                                    <th>Hành động</th>
                                 </tr>
                             </thead>
                             <tbody id="myProjectsListBody">
@@ -315,18 +304,16 @@
                 </div>
             </div>
 
-            <!-- ============================================================
-     KHO ĐỒ ÁN
-============================================================ -->
-            <div id="taskPage" class="page">
+            <!-- Kho đồ án-->
+            <div class="page" id="taskPage">
                 <div class="card">
                     <div class="card-header">
                         <h3>
-                            <i class="ti ti-stack" style="color:var(--primary)"></i>
+                            <i class="ti ti-stack"></i>
                             Kho đồ án
                             <span class="count-badge" id="repoCount">0</span>
                         </h3>
-                        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+                        <div class="repo-toolbar-actions">
                             <div class="view-toggle">
                                 <button class="view-btn" id="viewTableBtn" onclick="setRepoView('table')"
                                     title="Dạng bảng"><i class="ti ti-table"></i></button>
@@ -339,8 +326,8 @@
                         </div>
                     </div>
                     <div class="table-tools">
-                        <input type="text" id="taskSearch" placeholder="🔍  Tìm theo mã, tên đề tài..."
-                            oninput="filterProjectCards()">
+                        <input id="taskSearch" oninput="filterProjectCards()"
+                            placeholder="🔍  Tìm theo mã, tên đề tài..." type="text" />
                         <select id="taskFilter" onchange="filterProjectCards()">
                             <option value="">Tất cả trạng thái</option>
                             <option value="Đang thực hiện">Đang thực hiện</option>
@@ -353,13 +340,14 @@
                             <option value="name">Tên A–Z</option>
                         </select>
                     </div>
+
                     <!-- TABLE VIEW -->
-                    <div id="repoTableView" style="display:none">
+                    <div id="repoTableView">
                         <div class="table-wrap">
                             <table class="project-table">
                                 <thead>
                                     <tr>
-                                        <th style="width:44px">#</th>
+                                        <th>#</th>
                                         <th>Mã đồ án</th>
                                         <th>Tên đề tài / Mô tả</th>
                                         <th>Giảng viên</th>
@@ -367,56 +355,49 @@
                                         <th>Công nghệ</th>
                                         <th>Trạng thái</th>
                                         <th>Ngày tạo</th>
-                                        <th style="width:110px">Thao tác</th>
+                                        <th>Thao tác</th>
                                     </tr>
                                 </thead>
                                 <tbody id="projectTableBody"></tbody>
                             </table>
                         </div>
-                        <div id="projectTableEmpty" class="empty-state" style="display:none">
+                        <div class="empty-state" id="projectTableEmpty">
                             <i class="ti ti-folder-x"></i>
                             <p>Chưa có đồ án nào. Bấm <strong>Thêm đồ án</strong> để bắt đầu.</p>
                         </div>
                     </div>
                     <!-- CARD VIEW -->
                     <div id="repoCardView">
-                        <div id="projectCardContainer" class="project-card-grid"></div>
+                        <div class="project-card-grid" id="projectCardContainer"></div>
                     </div>
                 </div>
             </div>
 
-            <!-- ============================================================
-     THEO DÕI TIẾN ĐỘ
-============================================================ -->
-            <div id="progressPage" class="page">
-
+            <!-- Theo dõi tiến độ -->
+            <div class="page" id="progressPage">
                 <!-- Tab chọn sinh viên -->
                 <div class="card prog-student-tabs-card">
                     <div class="prog-tabs-label">Chọn sinh viên:</div>
                     <div class="prog-student-tabs" id="progStudentTabs"></div>
                 </div>
-
                 <div class="prog-layout" id="progLayout">
                     <!-- CỘT TRÁI: thông tin + milestone -->
                     <div class="prog-left">
                         <!-- Thông tin sinh viên -->
                         <div class="card prog-info-card" id="progInfoCard"></div>
-
                         <!-- Tiến độ -->
                         <div class="card prog-progress-card" id="progProgressCard"></div>
-
                         <!-- Milestone -->
                         <div class="card">
                             <div class="card-header">
-                                <h3><i class="ti ti-list-check" style="color:var(--primary)"></i>Milestone</h3>
+                                <h3><i class="ti ti-list-check"></i>Milestone</h3>
                                 <button class="primary-btn" onclick="openAddMilestoneModal()">
                                     <i class="ti ti-plus"></i> Thêm
                                 </button>
                             </div>
-                            <div id="progMilestoneList" class="prog-milestone-list"></div>
+                            <div class="prog-milestone-list" id="progMilestoneList"></div>
                         </div>
                     </div>
-
                     <!-- CỘT PHẢI: chat + timeline + tài liệu -->
                     <div class="prog-right">
                         <div class="card prog-chat-card">
@@ -432,13 +413,12 @@
                                     📁 Tài liệu
                                 </button>
                             </div>
-
                             <!-- Chat tab -->
-                            <div id="progTabChat" class="prog-tab-panel active">
-                                <div id="progChatMessages" class="prog-chat-messages"></div>
+                            <div class="prog-tab-panel active" id="progTabChat">
+                                <div class="prog-chat-messages" id="progChatMessages"></div>
                                 <div class="prog-chat-input-area">
-                                    <textarea id="progChatInput" rows="2"
-                                        placeholder="Nhập nhận xét / câu hỏi..."></textarea>
+                                    <textarea id="progChatInput" placeholder="Nhập nhận xét / câu hỏi..."
+                                        rows="2"></textarea>
                                     <div class="prog-chat-actions">
                                         <div class="prog-chat-meta">
                                             <div class="prog-chat-role">
@@ -460,55 +440,48 @@
                                     </div>
                                 </div>
                             </div>
-
                             <!-- Timeline tab -->
-                            <div id="progTabTimeline" class="prog-tab-panel">
-                                <div id="progTimeline" class="prog-timeline-list"></div>
+                            <div class="prog-tab-panel" id="progTabTimeline">
+                                <div class="prog-timeline-list" id="progTimeline"></div>
                             </div>
-
                             <!-- Tài liệu tab -->
-                            <div id="progTabDocs" class="prog-tab-panel">
+                            <div class="prog-tab-panel" id="progTabDocs">
                                 <div class="prog-docs-upload">
                                     <i class="ti ti-cloud-upload"></i>
                                     <p>Kéo thả file hoặc <label class="prog-upload-label" for="progFileInput">chọn
                                             file</label></p>
-                                    <input type="file" id="progFileInput" multiple style="display:none"
-                                        onchange="handleProgFileUpload(event)">
+                                    <input id="progFileInput" multiple="" onchange="handleProgFileUpload(event)"
+                                        type="file" />
                                 </div>
-                                <div id="progDocsList" class="prog-docs-list"></div>
+                                <div class="prog-docs-list" id="progDocsList"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <!-- Empty state khi chưa có dữ liệu -->
-                <div id="progEmptyState" class="prog-empty-state" style="display:none">
+                <div class="prog-empty-state" id="progEmptyState">
                     <i class="ti ti-chart-line"></i>
                     <p>Chưa có đồ án nào. Hãy thêm đồ án trong mục <strong>Kho đồ án</strong> để bắt đầu theo dõi tiến
                         độ.</p>
                 </div>
             </div>
-
-
-
-            <div id="deadlinePage" class="page">
+            <div class="page" id="deadlinePage">
                 <div class="card">
                     <div class="card-header">
-                        <h3><i class="ti ti-calendar-event" style="color:var(--primary)"></i>Lịch hẹn & Deadline</h3>
+                        <h3><i class="ti ti-calendar-event"></i>Lịch hẹn &amp; Deadline</h3>
                         <button class="primary-btn" onclick="openDeadlineModal()">
                             <i class="ti ti-plus"></i> Thêm lịch hẹn
                         </button>
                     </div>
-                    <div id="deadlineContainer" class="deadline-list"></div>
+                    <div class="deadline-list" id="deadlineContainer"></div>
                 </div>
             </div>
-            <!-- ============================================================
-     GITHUB
-============================================================ -->
-            <div id="githubPage" class="page">
+
+            <!--Github-->
+            <div class="page" id="githubPage">
                 <div class="card">
                     <div class="card-header">
-                        <h3><i class="ti ti-brand-github" style="color:var(--primary)"></i>GitHub Repository</h3>
+                        <h3><i class="ti ti-brand-github"></i>GitHub Repository</h3>
                         <button class="primary-btn" onclick="saveGithub()">
                             <i class="ti ti-device-floppy"></i> Lưu
                         </button>
@@ -516,15 +489,15 @@
                     <div class="form-grid">
                         <div class="form-group">
                             <label>Tên Repository</label>
-                            <input type="text" id="repoName">
+                            <input id="repoName" type="text" />
                         </div>
                         <div class="form-group">
                             <label>Số Commit</label>
-                            <input type="number" id="repoCommit">
+                            <input id="repoCommit" type="number" />
                         </div>
                         <div class="form-group full-width">
                             <label>Đường dẫn Repository</label>
-                            <input type="url" id="repoUrl">
+                            <input id="repoUrl" type="url" />
                         </div>
                     </div>
                     <div class="github-preview">
@@ -537,19 +510,16 @@
                 </div>
             </div>
 
-            <!-- ============================================================
-     PHẢN HỒI
-============================================================ -->
-            <div id="feedbackPage" class="page">
+            <!-- Phản hồi-->
+            <div class="page" id="feedbackPage">
                 <div class="card">
                     <div class="card-header">
-                        <h3><i class="ti ti-message-circle" style="color:var(--primary)"></i>Phản hồi</h3>
+                        <h3><i class="ti ti-message-circle"></i>Phản hồi</h3>
                     </div>
-                    <div id="feedbackList" class="feedback-list"></div>
+                    <div class="feedback-list" id="feedbackList"></div>
                     <div class="feedback-form">
-                        <input type="text" id="feedbackInput" placeholder="Nhập phản hồi...">
-                        <select id="feedbackRole"
-                            style="border:1px solid var(--border);border-radius:9px;padding:10px 13px;font-family:inherit;font-size:13px;background:var(--card);color:var(--text);cursor:pointer;outline:none">
+                        <input id="feedbackInput" placeholder="Nhập phản hồi..." type="text" />
+                        <select id="feedbackRole">
                             <option value="Sinh viên">Sinh viên</option>
                             <option value="Giảng viên">Giảng viên</option>
                         </select>
@@ -558,13 +528,11 @@
                 </div>
             </div>
 
-            <!-- ============================================================
-     NHẬT KÝ
-============================================================ -->
-            <div id="activityPage" class="page">
+            <!-- Nhật ký -->
+            <div class="page" id="activityPage">
                 <div class="card">
                     <div class="card-header">
-                        <h3><i class="ti ti-history" style="color:var(--primary)"></i>Nhật ký hoạt động</h3>
+                        <h3><i class="ti ti-history"></i>Nhật ký hoạt động</h3>
                         <button class="secondary-btn" onclick="clearLogs()"><i class="ti ti-trash"></i> Xóa nhật
                             ký</button>
                     </div>
@@ -572,13 +540,11 @@
                 </div>
             </div>
 
-            <!-- ============================================================
-     CÀI ĐẶT
-============================================================ -->
-            <div id="settingPage" class="page">
+            <!--Cài đặt-->
+            <div class="page" id="settingPage">
                 <div class="card">
                     <div class="card-header">
-                        <h3><i class="ti ti-settings" style="color:var(--primary)"></i>Cài đặt hệ thống</h3>
+                        <h3><i class="ti ti-settings"></i>Cài đặt hệ thống</h3>
                     </div>
                     <div class="setting-group">
                         <div class="setting-label">Giao diện</div>
@@ -594,12 +560,10 @@
                     </div>
                 </div>
             </div>
-
         </section>
     </main>
-    <!-- ============================================================
-     MODAL CHI TIẾT THẺ
-============================================================ -->
+
+    <!--Chi tiết thẻ-->
     <div class="modal" id="cardDetailModal">
         <div class="modal-content modal-large">
             <div class="modal-header">
@@ -614,9 +578,7 @@
         </div>
     </div>
 
-    <!-- ============================================================
-     MODAL TẠO/SỬA ĐỒ ÁN
-============================================================ -->
+    <!--Chỉnh sửa đồ án -->
     <div class="modal" id="projectCardModal">
         <div class="modal-content modal-large">
             <div class="modal-header">
@@ -626,23 +588,23 @@
             <div class="form-grid">
                 <div class="form-group">
                     <label>Mã đồ án <span class="required">*</span></label>
-                    <input type="text" id="pcMa" placeholder="...">
+                    <input id="pcMa" placeholder="..." type="text" />
                 </div>
                 <div class="form-group">
                     <label>Tên đề tài <span class="required">*</span></label>
-                    <input type="text" id="pcTen" placeholder="Nhập tên đề tài...">
+                    <input id="pcTen" placeholder="Nhập tên đề tài..." type="text" />
                 </div>
                 <div class="form-group">
                     <label>Giảng viên hướng dẫn</label>
-                    <input type="text" id="pcGV" placeholder="Tên giảng viên...">
+                    <input id="pcGV" placeholder="Tên giảng viên..." type="text" />
                 </div>
                 <div class="form-group">
                     <label>Sinh viên thực hiện</label>
-                    <input type="text" id="pcSV" placeholder="Tên sinh viên...">
+                    <input id="pcSV" placeholder="Tên sinh viên..." type="text" />
                 </div>
                 <div class="form-group">
                     <label>Công nghệ sử dụng</label>
-                    <input type="text" id="pcCN" placeholder="...">
+                    <input id="pcCN" placeholder="..." type="text" />
                 </div>
                 <div class="form-group">
                     <label>Trạng thái</label>
@@ -654,15 +616,15 @@
                 </div>
                 <div class="form-group full-width">
                     <label>Link GitHub / Demo</label>
-                    <input type="url" id="pcLink" placeholder="https://github.com/...">
+                    <input id="pcLink" placeholder="https://github.com/..." type="url" />
                 </div>
                 <div class="form-group full-width">
                     <label>Mô tả đề tài</label>
-                    <textarea id="pcMoTa" rows="4" placeholder="Mô tả ngắn về đồ án..."></textarea>
+                    <textarea id="pcMoTa" placeholder="Mô tả ngắn về đồ án..." rows="4"></textarea>
                 </div>
                 <div class="form-group full-width">
                     <label>Đánh giá của giảng viên</label>
-                    <textarea id="pcReview" rows="4" placeholder="Nhập đánh giá của giảng viên..."></textarea>
+                    <textarea id="pcReview" placeholder="Nhập đánh giá của giảng viên..." rows="4"></textarea>
                 </div>
             </div>
             <div class="modal-footer">
@@ -674,22 +636,20 @@
         </div>
     </div>
 
-    <!-- ============================================================
-     MODAL LỊCH HẸN
-============================================================ -->
+    <!-- Lịch hẹn -->
     <div class="modal" id="deadlineModal">
         <div class="modal-content">
             <div class="modal-header">
                 <h3>Thêm lịch hẹn</h3>
                 <button class="close-btn" onclick="closeDeadlineModal()"><i class="ti ti-x"></i></button>
             </div>
-            <div class="form-group" style="margin-bottom:12px">
+            <div class="form-group">
                 <label>Tên công việc / Lịch hẹn</label>
-                <input type="text" id="deadlineTitle" placeholder="VD: Nộp báo cáo tiến độ...">
+                <input id="deadlineTitle" placeholder="VD: Nộp báo cáo tiến độ..." type="text" />
             </div>
             <div class="form-group">
                 <label>Ngày hết hạn</label>
-                <input type="date" id="deadlineDate">
+                <input id="deadlineDate" type="date" />
             </div>
             <div class="modal-footer">
                 <button class="secondary-btn" onclick="closeDeadlineModal()">Hủy</button>
@@ -705,13 +665,13 @@
                 <h3 id="milestoneModalTitle">Thêm Milestone</h3>
                 <button class="close-btn" onclick="closeMilestoneModal()"><i class="ti ti-x"></i></button>
             </div>
-            <div class="form-group" style="margin-bottom:12px">
+            <div class="form-group">
                 <label>Tên milestone <span class="required">*</span></label>
-                <input type="text" id="msTitleInput" placeholder="VD: Nộp chương 1...">
+                <input id="msTitleInput" placeholder="VD: Nộp chương 1..." type="text" />
             </div>
-            <div class="form-group" style="margin-bottom:12px">
+            <div class="form-group">
                 <label>Ngày hạn nộp</label>
-                <input type="date" id="msDateInput">
+                <input id="msDateInput" type="date" />
             </div>
             <div class="form-group">
                 <label>Trạng thái</label>
@@ -730,11 +690,7 @@
         </div>
     </div>
 
-    <!-- TOAST -->
-
-    <div id="toastContainer" class="toast-container"></div>
-
-
+    <div class="toast-container" id="toastContainer"></div>
     <script src="js/core/storage.js"></script>
     <script src="js/core/navigation.js"></script>
     <script src="js/ui/toast.js"></script>

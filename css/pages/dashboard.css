@@ -1,13 +1,6 @@
-/* ===================================
-   DASHBOARD PAGE - #dashboardPage
-=================================== */
-
-/* ===================================
-   DASHBOARD LAYOUT
-=================================== */
 .dashboard-layout {
     display: grid;
-    grid-template-columns: 1fr 340px;
+    grid-template-columns: 1fr 340px; /*chia dashborad thành 2 cột*/
     gap: 20px;
     align-items: start;
     height: 100%;
@@ -25,9 +18,7 @@
     gap: 20px;
 }
 
-/* ===================================
-   DASH PROJECT TABLE (compact)
-=================================== */
+/*Bảng đồ án*/
 .dash-table-wrap {
     overflow-x: auto;
     border-radius: 10px;
@@ -78,9 +69,7 @@ body.dark .dash-project-table th { background: #1a2740; }
 body.dark .dash-project-table tr:hover td { background: #1a3030; }
 body.dark .dash-project-table tbody tr:hover td { background: rgba(22, 160, 133, .1) !important; }
 
-/* ===================================
-   DEADLINE (Dashboard sidebar)
-=================================== */
+/*Dealine*/
 .deadline-list {
     display: flex;
     flex-direction: column;
@@ -107,9 +96,7 @@ body.dark .dash-project-table tbody tr:hover td { background: rgba(22, 160, 133,
 .deadline-overdue { border-left-color: var(--danger); }
 .deadline-done { border-left-color: var(--success); opacity: .7; }
 
-/* ===================================
-   GITHUB QUICK BUTTON (Dashboard)
-=================================== */
+/*github */
 .github-quick-btn-wrap { margin-top: 13px; }
 
 .github-quick-btn {
@@ -137,14 +124,8 @@ body.dark .dash-project-table tbody tr:hover td { background: rgba(22, 160, 133,
 
 .github-quick-btn i:first-child { font-size: 18px; }
 
-/* ===================================
-   STATUS ICON
-=================================== */
 .status i { vertical-align: middle; }
 
-/* ===================================
-   MODAL
-=================================== */
 .modal {
     position: fixed;
     inset: 0;
@@ -203,9 +184,7 @@ body.dark .dash-project-table tbody tr:hover td { background: rgba(22, 160, 133,
 
 .modal-large { max-width: 700px !important; }
 
-/* ===================================
-   TOAST
-=================================== */
+
 .toast-container {
     position: fixed;
     top: 18px; right: 18px;
@@ -242,17 +221,12 @@ body.dark .dash-project-table tbody tr:hover td { background: rgba(22, 160, 133,
     to   { opacity: 1; transform: translateX(0); }
 }
 
-/* ===================================
-   SCROLLBAR
-=================================== */
 ::-webkit-scrollbar { width: 5px; height: 5px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 20px; }
 ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 
-/* ===================================
-   TABLE COUNT BADGE
-=================================== */
+
 .count-badge {
     display: inline-flex;
     align-items: center;
@@ -266,14 +240,8 @@ body.dark .dash-project-table tbody tr:hover td { background: rgba(22, 160, 133,
     margin-left: 7px;
 }
 
-/* ===================================
-   REQUIRED
-=================================== */
 .required { color: #ef4444; font-size: 12px; }
 
-/* ===================================
-   RESPONSIVE
-=================================== */
 @media(max-width:1200px) {
     .stat-grid { grid-template-columns: repeat(2, 1fr); }
     .dashboard-layout { grid-template-columns: 1fr; }

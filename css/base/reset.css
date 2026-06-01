@@ -1,10 +1,9 @@
-/* ===================================
-   RESET & ROOT
-=================================== */
+/*Reset giao diện và đồng bộ trình duyệt*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border-radius:8px;
 }
 
 html {
@@ -41,9 +40,7 @@ body {
     line-height: 1.5;
 }
 
-/* ===================================
-   DARK MODE
-=================================== */
+/* DARK MODE*/
 body.dark {
     --bg: #0b1120;
     --card: #151f2e;

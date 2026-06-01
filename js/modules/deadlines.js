@@ -66,9 +66,7 @@ function updateDeadlineBadge() {
     document.getElementById("deadlineBadge").textContent = n;
 }
 
-/* ===================================
-   GITHUB
-=================================== */
+/*Github*/
 function saveGithub() {
     appData.githubInfo = {
         repoName: document.getElementById("repoName").value,
@@ -90,9 +88,7 @@ function renderGithub() {
     link.textContent = r.repoUrl ? "Mở GitHub" : "Chưa có đường dẫn";
 }
 
-/* ===================================
-   FEEDBACK
-=================================== */
+/*Feedback*/
 function sendFeedback() {
     const text = document.getElementById("feedbackInput").value.trim();
     const author = document.getElementById("feedbackRole").value;
@@ -117,9 +113,7 @@ function renderFeedbacks() {
         </div>`).join("");
 }
 
-/* ===================================
-   QUICK FEEDBACK (Dashboard)
-=================================== */
+/*Quick feedback*/
 function sendQuickFeedback() {
     const text = document.getElementById("quickFeedbackInput").value.trim();
     const author = document.getElementById("quickFeedbackRole").value;
@@ -146,15 +140,12 @@ function renderQuickFeedbacks() {
         </div>`).join("");
 }
 
-/* ===================================
-   THEO DÕI TIẾN ĐỘ
-=================================== */
+/*Theo dõi tiếng độ*/
 let progCurrentCardIdx = 0;
 let progCurrentMsgType = 'question';
 let progCurrentChatRole = 'Giảng viên';
 let progEditingMsIdx = -1;
 
-// Ensure progress data exists on each card
 function ensureProgData(card) {
     if (!card.progMessages) card.progMessages = [];
     if (!card.progMilestones) card.progMilestones = [];
@@ -454,7 +445,6 @@ function switchProgTab(tab, btn) {
     document.getElementById(`progTab${tab.charAt(0).toUpperCase() + tab.slice(1)}`).classList.add('active');
 }
 
-// Override showPage to init progress page
 const _origShowPage = showPage;
 window.showPage = function(pageId, button) {
     _origShowPage(pageId, button);
@@ -464,9 +454,7 @@ window.showPage = function(pageId, button) {
     }
 };
 
-/* ===================================
-   RESET
-=================================== */
+/*Reset*/
 function resetData() {
     if (confirm("Xóa toàn bộ dữ liệu? Thao tác không thể hoàn tác!")) {
         localStorage.removeItem("graduationProject_v2");
@@ -474,9 +462,7 @@ function resetData() {
     }
 }
 
-/* ===================================
-   INIT
-=================================== */
+/*Init*/
 document.addEventListener("DOMContentLoaded", () => {
     applyTheme();
     loadProject();

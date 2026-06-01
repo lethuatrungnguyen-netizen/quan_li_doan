@@ -1,11 +1,4 @@
-/* ===================================
-   REPOSITORY PAGE - #taskPage
-   (Kho đồ án)
-=================================== */
-
-/* ===================================
-   PROJECT INFO CARD
-=================================== */
+/* Kho đồ án*/
 .my-projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -135,9 +128,6 @@ body.dark .pic-footer {
     color: var(--text-light);
 }
 
-/* ===================================
-   GITHUB
-=================================== */
 .github-preview {
     margin-top: 18px;
     display: flex;
@@ -179,9 +169,6 @@ body.dark .pic-footer {
     text-decoration: underline;
 }
 
-/* ===================================
-   PROJECT CARD ANIMATIONS
-=================================== */
 .my-projects-grid .project-info-card {
     animation: cardFadeIn .35s cubic-bezier(.4, 0, .2, 1) both;
 }

@@ -1,6 +1,4 @@
-/* ===================================
-   PROJECT (ĐỒ ÁN CỦA TÔI - QUẢN LÝ NHIỀU ĐỒ ÁN)
-=================================== */
+/* Project= */
 
 // Thêm hoặc Cập nhật một đồ án trong danh sách cá nhân
 function saveNewProjectToList() {
@@ -20,7 +18,6 @@ function saveNewProjectToList() {
     };
 
     if (editIndex >= 0) {
-        // Trường hợp chỉnh sửa đồ án hiện có
         appData.myProjects[editIndex] = projectItem;
         addLog(`Đã cập nhật đồ án: ${name}`);
         showToast("Cập nhật đồ án thành công!");
@@ -33,8 +30,8 @@ function saveNewProjectToList() {
 
     saveData();
     resetMyProjectForm();
-    renderMyProjectsList();      // Làm mới bảng quản lý
-    renderProjectDashboard();    // Làm mới khối hiển thị ngoài trang chủ (bảng điều khiển)
+    renderMyProjectsList();      
+    renderProjectDashboard();    
 }
 
 // Thiết lập form về trạng thái thêm mới ban đầu
@@ -169,9 +166,6 @@ function loadProject() {
     renderProjectDashboard();
 }
 
-/* ===================================
-   GITHUB QUICK BTN
-=================================== */
 function updateGithubQuickBtn() {
     const btn = document.getElementById("githubQuickBtn");
     const lbl = document.getElementById("githubQuickLabel");
@@ -189,9 +183,7 @@ function openGithubLink() {
     else showToast("Chưa có đường dẫn GitHub", "warning");
 }
 
-/* ===================================
-   DASHBOARD STATS
-=================================== */
+
 function updateDashboard() {
     const cards = appData.projectCards || [];
     const total = cards.length;
@@ -208,9 +200,7 @@ function updateDashboard() {
     document.getElementById("progressText").textContent = `${done} / ${total} đồ án hoàn thành`;
 }
 
-/* ===================================
-   DASHBOARD TABLE
-=================================== */
+
 function renderDashboardTable() {
     const cards = appData.projectCards || [];
     const el = document.getElementById("dashTableBody");
@@ -249,9 +239,7 @@ function renderDashboardTable() {
         </tr>`;
     }).join("");
 }
-/* ===================================
-   KHO ĐỒ ÁN — PROJECT CARDS
-=================================== */
+/*Kho đồ án*/
 let editingCardIndex = -1;
 let currentView = appData.repoView || "card";
 
@@ -430,9 +418,6 @@ function renderProjectCardGrid(filtered) {
     }).join("");
 }
 
-/* ===================================
-   CARD DETAIL
-=================================== */
 let viewingCardIndex = -1;
 
 function openCardDetail(index) {

@@ -1,6 +1,4 @@
-/* ===================================
-   SIDEBAR
-=================================== */
+/*Thanh bên*/
 .sidebar {
     width: 248px;
     background: var(--sidebar-bg);
@@ -66,7 +64,7 @@
     cursor: pointer;
     transition: .2s;
     font-family: inherit;
-    font-size: 13.5px;
+    font-size: 14px;
     border-radius: 10px;
     position: relative;
     text-align: left;
@@ -105,10 +103,3 @@
     text-align: center;
 }
 
-.sidebar-footer {
-    padding: 14px 16px;
-    border-top: 1px solid rgba(255, 255, 255, .07);
-    font-size: 11px;
-    color: rgba(255, 255, 255, .3);
-    text-align: center;
-}
